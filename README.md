@@ -1,8 +1,8 @@
-# Professional-Grade Rust Trading Dashboard
+# Rust Trading Dashboard
 
 A high-performance, real-time trading dashboard built in Rust using egui, designed for ultra-low latency operations with the Zerodha Kite API.
 
-## 🚀 Features
+## Features
 
 ### Core Architecture
 - **Multi-threaded, Event-driven Design**: UI thread remains non-blocking with dedicated worker threads
@@ -17,14 +17,8 @@ A high-performance, real-time trading dashboard built in Rust using egui, design
 - **Authentication**: Secure Zerodha OAuth integration
 - **Multi-exchange Support**: NSE, BSE, and other supported exchanges
 
-### UI/UX Optimized for Trading
-- **Professional Dark Theme**: Optimized for long trading sessions
-- **Color-coded Data**: Green/red P&L indicators, status-based coloring
-- **High-density Information Display**: Tabular layouts for maximum data visibility
-- **Responsive Design**: 60+ FPS rendering without blocking operations
-- **Real-time Status**: Connection status, performance metrics, market hours
 
-## 🏗️ Architecture
+## Architecture
 
 ### Technology Stack
 - **GUI Framework**: `egui` + `eframe` for immediate mode rendering
@@ -71,7 +65,7 @@ trading_dashboard/
         └── logs.rs         # Application logs viewer
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### API Configuration
 Edit `config.toml`:
@@ -94,13 +88,6 @@ tick_buffer_size = 1000
 2. Get your `api_key` and `api_secret`
 3. Set redirect URL to `http://localhost:8080` (or your preferred URL)
 4. Update `config.toml` with your credentials
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Rust 1.70+ (for async support and latest features)
-- Zerodha trading account with KiteConnect API access
-- Valid API credentials
 
 ### Installation & Running
 
@@ -127,7 +114,7 @@ cargo build --release
 4. **Complete authentication**: Paste the request_token back into the app
 5. **Start trading**: Access positions, orders, and real-time data
 
-## 🔧 Performance Optimizations
+## Performance Optimizations
 
 ### Ultra-Low Latency Features
 - **Lock-free Data Structures**: `DashMap` for concurrent access without blocking
@@ -142,7 +129,7 @@ cargo build --release
 - **WebSocket Worker**: Real-time market data with auto-reconnection
 - **Event System**: `crossbeam-channel` for high-throughput message passing
 
-## 📊 Key Features
+## Key Features
 
 ### Real-time Trading
 - **Live Position Tracking**: P&L updates with every price tick
@@ -163,51 +150,16 @@ cargo build --release
 - **Order Status**: Real-time order execution tracking
 - **Error Handling**: Comprehensive error reporting and recovery
 
-## 🛠️ Development
-
-### Code Organization
-- **Modular Design**: Clear separation of concerns
-- **Type Safety**: Extensive use of Rust's type system
-- **Error Handling**: `anyhow` and `thiserror` for comprehensive error management
-- **Documentation**: Inline documentation for all public APIs
-
 ### Performance Considerations
 - **Memory Management**: Minimal allocations in hot paths
 - **Async Operations**: Non-blocking I/O throughout
 - **Efficient Data Structures**: Optimized for trading data patterns
 - **Resource Management**: Proper cleanup and resource handling
 
-## 📈 Trading Workflow
+## Trading Workflow
 
 1. **Authentication**: Secure OAuth flow with Zerodha
 2. **Data Subscription**: Subscribe to relevant instrument price feeds
 3. **Position Monitoring**: Real-time P&L tracking
 4. **Order Execution**: Quick order placement and management
 5. **Performance Analysis**: P&L analytics and trading metrics
-
-## 🔐 Security
-
-- **API Key Management**: Secure configuration file storage
-- **OAuth Integration**: Standard OAuth 2.0 flow with Zerodha
-- **No Credential Storage**: Request tokens are single-use
-- **Secure Communication**: HTTPS for all API communications
-
-## 🚨 Disclaimer
-
-This software is for educational and development purposes. Live trading involves significant financial risk. Always test thoroughly with paper trading before using with real money. The developers are not responsible for any financial losses incurred through the use of this software.
-
-## 📄 License
-
-This project is licensed under the MIT License. See LICENSE file for details.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please ensure:
-- Code follows Rust best practices
-- Performance optimizations are maintained
-- Trading-specific requirements are considered
-- Comprehensive testing for financial operations
-
----
-
-**Built with ❤️ for the algorithmic trading community**
